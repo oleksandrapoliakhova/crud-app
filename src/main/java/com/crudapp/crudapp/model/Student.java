@@ -17,8 +17,11 @@ public class Student {
 
     @Column(name = "id")
     @Id
-    @GeneratedValue
-    private Long studentId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(name = "student_id")
+    private String studentId;
 
     @Column(name = "first_name")
     private String firstName;
